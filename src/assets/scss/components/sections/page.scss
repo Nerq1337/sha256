@@ -1,0 +1,60 @@
+.page {
+	padding: 0 20px;
+
+	&__title {
+		font-weight: 600;
+		margin-bottom: 16px;
+		letter-spacing: .04rem;
+	}
+}
+
+.inputs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+}
+
+.input {
+	font-size: 18px;
+	font-weight: 500;
+	display: flex;
+	flex: 1 1 100%;
+	flex-direction: column;
+	width: 319px;
+	color: $textDark;
+
+	span {
+		margin-bottom: 6px;
+	}
+}
+
+.text-area {
+	font-family: 'Droid Sans Mono', Consolas, sans-serif;
+	font-size: 18px;
+	height: 180px;
+	padding: 10px;
+	resize: none;
+	transition: background-color .3s;
+	color: $textInput;
+	border-radius: 6px;
+	background-color: $bgInput;
+
+	&:focus {
+		background-color: lighten($bgInput, 4%);
+	}
+
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 6px;
+		background-color: lighten($bgInput, 10%);
+	}
+
+	&_output {
+		overflow: hidden;
+		height: 60px;
+		vertical-align: center;
+	}
+}
